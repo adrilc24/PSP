@@ -9,8 +9,9 @@ import java.util.Arrays;
 public class EjemploStream4 {
 
 	public static void main(String args[]) throws IOException {
-		ProcessBuilder p = new ProcessBuilder ("java", "HolaMundo1");
-		p.directory (new File("/home/adrcre/PSP/HolaMundo1/bin/"));
+		ProcessBuilder p = new ProcessBuilder ("java", "HolaMundo4");
+		p.directory (new File("/home/adrcre/PSP/HolaMundo4/bin/"));
+		
 		Process process = p.start();
 
 		InputStream is = (InputStream) process.getInputStream();
