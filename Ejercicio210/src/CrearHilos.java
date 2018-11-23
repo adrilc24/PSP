@@ -27,5 +27,6 @@ public class CrearHilos {
 			return;
 		}
 		hilo1.interrupt();
+		System.out.println("\tFin de CrearHilos");
 	}
 }
