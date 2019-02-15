@@ -24,6 +24,8 @@ class HiloEsperaNseg extends Thread {
 		HiloEsperaNseg hilo2 = new HiloEsperaNseg(5);
 		HiloEsperaNseg hiloDaemon = new HiloEsperaNseg(20);
 		
+		
+		//Convertimos hiloDaemon en tipo daemon
 		hiloDaemon.setDaemon(true);
 		hilo1.setName("hilo 1");
 		hilo2.setName("hilo 2");
@@ -34,11 +36,11 @@ class HiloEsperaNseg extends Thread {
 		
 		try {
 			Thread.currentThread().sleep(3000);
-			hiloDaemon.sleep(20000);
 		} catch (InterruptedException e) {
 			System.out.println(Thread.currentThread().getName() + " interrumpido. ");
 			return;
 		}
 		hilo1.interrupt();
+		System.out.println("El hilo principal ha acabado");
 	}
 }
